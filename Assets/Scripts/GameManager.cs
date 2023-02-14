@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartLevel : MonoBehaviour
+
+public class GameManager : MonoBehaviour
 {
     public GameObject player;
     private Vector3 startPosition;
     public string currentScene;
-    private void Start()
-    {
-        startPosition = player.transform.position;
-    }
-    private void OnTriggerEnter2D(Collider2D other)
+    public string nextScene;
+
+    public void Respawn()
     {
         player.transform.position = startPosition;
         SceneManager.LoadScene(currentScene);
+    }
+
+    public void MoveToNextLevel()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }

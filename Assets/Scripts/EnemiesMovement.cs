@@ -31,8 +31,6 @@ public class EnemiesMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, 90 + angle);
     }
 
-    
-
     private IEnumerator EnemieShooting(Vector3 dir)
     {
         while (true)
@@ -45,8 +43,5 @@ public class EnemiesMovement : MonoBehaviour
             Rigidbody2D bullet = Instantiate(prefabBullet, bulletPosition, Quaternion.identity);
             bullet.AddForce(dir * shootForce, ForceMode2D.Impulse);
         }
-        
-
-        
     }
 }

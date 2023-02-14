@@ -2,15 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour
+public class KillPlayer : MonoBehaviour
 {
-    public SpriteRenderer doorRenderer;
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            doorRenderer.color = Color.red;
+            gameManager.Respawn();
         }
     }
 }
