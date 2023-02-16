@@ -9,7 +9,6 @@ public class CamaraMovement : MonoBehaviour
     private Vector3 camaraPosition;
     public float minPosition = 0;
     public float maxPosition = 18;
-    private bool firstFloor = false;
 
     private void Start()
     {
