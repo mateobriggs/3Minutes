@@ -1185,6 +1185,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8746677931212747928, guid: a69b5995ddbc87e4d8ee076d6c929dbb, type: 3}
+      propertyPath: offset
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746677931212747932, guid: a69b5995ddbc87e4d8ee076d6c929dbb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 99700562, guid: 560d0201b89b710419faca19ebcb1b9a, type: 3}
     - target: {fileID: 8746677931212747936, guid: a69b5995ddbc87e4d8ee076d6c929dbb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1199,7 +1207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8746677931212747939, guid: a69b5995ddbc87e4d8ee076d6c929dbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 8746677931212747939, guid: a69b5995ddbc87e4d8ee076d6c929dbb, type: 3}
       propertyPath: m_LocalPosition.z
