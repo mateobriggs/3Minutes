@@ -16,16 +16,24 @@ public class InputSystem : MonoBehaviour
         public bool isConstant;
     }
 
+    public Animator animator;
     public List<InputActions> inputActions;
 
     private void Update()
     {
+        print(Input.anyKey);
         foreach(InputActions action in inputActions)
         {
             if(Input.GetKeyDown(action.keyCode) || Input.GetKey(action.keyCode) && action.isConstant)
             {
                 action.action.Invoke();
+             
             }
+        }
+        if (!Input.anyKey)
+        {
+            animator.SetBool("RunningLeft", false);
+            animator.SetBool("RunningRight", false);
         }
     }
 }
