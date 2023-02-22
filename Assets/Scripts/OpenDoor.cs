@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    public SpriteRenderer doorRenderer;
+    public Animator animator;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            doorRenderer.color = Color.red;
+            animator.SetBool("Button Pressed", true);
         }
     }
 }

@@ -114,4 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dec4220a07a81345aaa33de54653723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorRenderer: {fileID: 0}
+  animator: {fileID: 7628786302884863929, guid: dcca2c40faba8af4cabc8a8cd30530a4, type: 3}
