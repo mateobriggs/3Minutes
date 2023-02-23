@@ -6,16 +6,18 @@ public class NextLevel : MonoBehaviour
 {
     private GameManager gameManager;
     private SpriteRenderer spriteRenderer;
+    private OpenDoor openDoor;
 
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        spriteRenderer = GetComponent<SpriteRenderer>();    
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        openDoor = FindObjectOfType<OpenDoor>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if(spriteRenderer.color == Color.red)
+        if(openDoor.doorOpen)
         {
             if (other.gameObject.tag == "Player")
             {

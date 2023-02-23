@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     public Animator animator;
+    public bool doorOpen = false;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -12,6 +13,7 @@ public class OpenDoor : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             animator.SetBool("Button Pressed", true);
+            doorOpen = true;
         }
     }
 }
