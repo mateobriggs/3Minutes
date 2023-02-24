@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2632546178949655905}
   - component: {fileID: 2632546178949655906}
-  - component: {fileID: 2632546178949655907}
   - component: {fileID: 2632546178949655908}
   - component: {fileID: 2256809201005823689}
+  - component: {fileID: 9088557037301226659}
   m_Layer: 0
   m_Name: Lava Square
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,18 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2632546178949655907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2632546178949655904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d29ad9f3816a85e4d890e617c7bb8697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2632546178949655908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,3 +133,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9088557037301226659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632546178949655904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29ad9f3816a85e4d890e617c7bb8697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDies: {fileID: 0}

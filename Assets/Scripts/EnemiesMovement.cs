@@ -37,7 +37,7 @@ public class EnemiesMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(timeBetweenShots);
             dir = (target.transform.position - transform.position).normalized;
-            Vector3 bulletPosition = enemie.transform.position + dir.normalized * 1.5f;
+            Vector3 bulletPosition = enemie.transform.position + dir.normalized * 1f;
             Rigidbody2D bullet = Instantiate(prefabBullet, bulletPosition, Quaternion.identity);
             bullet.AddForce(dir * shootForce, ForceMode2D.Impulse);
         }

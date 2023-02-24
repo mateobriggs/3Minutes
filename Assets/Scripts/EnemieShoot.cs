@@ -20,7 +20,7 @@ public class EnemieShoot : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(timeBetweenShots);
-            Vector2 bulletPosition = new Vector2 (enemie.transform.position.x, enemie.transform.position.y) + dir.normalized * 1.5f;
+            Vector2 bulletPosition = new Vector2 (enemie.transform.position.x, enemie.transform.position.y) + dir.normalized * 1f;
             Rigidbody2D bullet = Instantiate(prefabBullet, bulletPosition, Quaternion.identity);
             bullet.AddForce(dir.normalized * shootForce, ForceMode2D.Impulse);
         }

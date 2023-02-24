@@ -16,7 +16,7 @@ public class KillPlayer : MonoBehaviour
         
             if (other.gameObject.tag == "Player")
             {
-                gameManager.Respawn();
+            gameManager.Respawn();
             }
     }
 }

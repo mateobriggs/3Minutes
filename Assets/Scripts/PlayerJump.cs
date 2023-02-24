@@ -9,7 +9,7 @@ public class PlayerJump : MonoBehaviour
     private float radius = 0.18f;
     public LayerMask floorMask;
     private float offset = 0.5f;
-
+    public AudioSource playerJump;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,13 +19,9 @@ public class PlayerJump : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(transform.position + Vector3.down * offset, radius, floorMask))
         {
+            playerJump.Play();  
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-    }
-
-    public void StartElevator()
-    {
-
     }
 
     private void OnDrawGizmos()
