@@ -21,7 +21,6 @@ public class InputSystem : MonoBehaviour
 
     private void Update()
     {
-        print(Input.anyKey);
         foreach(InputActions action in inputActions)
         {
             if(Input.GetKeyDown(action.keyCode) || Input.GetKey(action.keyCode) && action.isConstant)

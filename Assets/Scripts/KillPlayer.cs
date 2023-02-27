@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour
 {
     private GameManager gameManager;
+    
 
     private void Start()
     {
@@ -13,10 +14,9 @@ public class KillPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-            if (other.gameObject.tag == "Player")
-            {
+        if (other.gameObject.tag == "Player")
+        {
             gameManager.Respawn();
-            }
+        }
     }
 }
