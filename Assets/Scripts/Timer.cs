@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -33,6 +34,10 @@ public class Timer : MonoBehaviour
         if(time < 1)
         {
             gameManager.GameOver();
+            Destroy(gameObject);
+        }
+        else if (SceneManager.GetActiveScene().name == "Win Menu")
+        {
             Destroy(gameObject);
         }
     }
